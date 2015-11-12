@@ -31,6 +31,6 @@ These are easily available in Anaconda Python.
       --output OUTPUT, -o OUTPUT Output file location
 
 Individual reports may have additional arguments beyond these base arguments
-shared by all reports. By default, the output file is <name of the report>.html
+shared by all reports. By default, the output file is [name of the report].html
 in the current working directory.
     
