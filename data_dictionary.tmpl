@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="report.css">
+</head>
+<body>
+  <div class="content">
+  <h1>{{title}}</h1>
+  {% for schema in dictionary %}
+    <h2>{{schema['schema']}} schema</h2>
+    <h4>{{schema['description']}}</h4>
+  
+    {% for table in schema['tables'] %}
+      <table class="min"><th>{{table['table']}}:</th><td>{{table['description']}}</table>
+      <table class="wide">
+        <tr><th>Attribute</th><th>Type</th><th>Nullable</th><th>Description</th></tr>
+        {% for column in table['columns'] %}
+          <tr><td>{{column['column']}}</td><td>{{column['data_type']}}</td><td>{{column['is_nullable']}}</td><td>{{column['description']}}</td></tr>
+        {% endfor %}
+      </table>
+      <br />
+    {% endfor %}
+  {% endfor %}
+  </div>
+</body>
+</html>
