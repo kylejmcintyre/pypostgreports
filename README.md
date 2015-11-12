@@ -17,8 +17,22 @@ These are easily available in Anaconda Python.
 
 ## Usage
 
-Simply invoke data_dictionary.py or data_size.py. They produce
-data_dictionary.html and data_size.html respectively. The HTML
-files are meant to piped through a PDF converter like wkhtml2pdf.
+    usage: ./data_dictionary.py [-h] [--host HOST] [--port PORT] [--user USER]
+                                [--pass PASS] [--db DBNAME] [--output OUTPUT]
+                                [--title TITLE]
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --host HOST           Postgres host
+      --port PORT           Postgres port
+      --user USER, -u USER  Postgres user
+      --pass PASS, -p PASS  Postgres password
+      --db DBNAME, -d DBNAME
+                            Postgres database
+      --output OUTPUT, -o OUTPUT
+                            Output file location
 
-
+Individual reports may have additional arguments beyond these base arguments
+shared by all reports. By default, the output file is <name of the report>.html
+in the current working directory.
+    
