@@ -69,4 +69,4 @@ tmpl_vars = {
    'index_size_table': report.fix_html(index_size_table.to_html())
 }
 
-report.generate_report(tmpl_vars)
+report.generate_report(tmpl_vars, args)

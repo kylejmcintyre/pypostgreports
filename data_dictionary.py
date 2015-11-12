@@ -68,4 +68,4 @@ tmpl_vars = {
     'title': args.title
 }
 
-report.generate_report(tmpl_vars)
+report.generate_report(tmpl_vars, args)
