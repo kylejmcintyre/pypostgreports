@@ -22,15 +22,13 @@ These are easily available in Anaconda Python.
                                 [--title TITLE]
     
     optional arguments:
-      -h, --help            show this help message and exit
-      --host HOST           Postgres host
-      --port PORT           Postgres port
-      --user USER, -u USER  Postgres user
-      --pass PASS, -p PASS  Postgres password
-      --db DBNAME, -d DBNAME
-                            Postgres database
-      --output OUTPUT, -o OUTPUT
-                            Output file location
+      -h, --help                 show this help message and exit
+      --host HOST                Postgres host
+      --port PORT                Postgres port
+      --user USER,     -u USER   Postgres user
+      --pass PASS,     -p PASS   Postgres password
+      --db DBNAME,     -d DBNAME Postgres database
+      --output OUTPUT, -o OUTPUT Output file location
 
 Individual reports may have additional arguments beyond these base arguments
 shared by all reports. By default, the output file is <name of the report>.html
