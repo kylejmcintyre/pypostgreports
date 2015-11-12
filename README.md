@@ -3,6 +3,9 @@ A collection of generic "reports" that can be run on a Postgres
 database including a data dictionary generator as well as a 
 database size report.
 
+Note that the data dictionary is intended for Postgres instances
+that are thoroughly documented using Postgres comments. 
+
 ## Dependencies
 Tested on Postgres 9.4 and Python 2.7.x and requires the following Python modules:
 
