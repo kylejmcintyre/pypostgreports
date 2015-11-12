@@ -5,6 +5,7 @@ import report, sys, psycopg2.extras
 import pandas as pd
 
 parser = report.get_parser(sys.argv[0])
+parser.add_argument('--title', '-t', required=False, dest='title', default="Database Size Report", help='Report Title')
 
 args = parser.parse_args()
 conn = report.get_connection(args)
@@ -66,7 +67,8 @@ index_size_table = pd.read_sql(q, conn)
 tmpl_vars = {
    'total_size':       total_size,
    'rel_size_table':   report.fix_html(rel_size_table.to_html(float_format=lambda x: '%10.2f' % x)),
-   'index_size_table': report.fix_html(index_size_table.to_html())
+   'index_size_table': report.fix_html(index_size_table.to_html()),
+   'title':            args.title
 }
 
 report.generate_report(tmpl_vars, args)
