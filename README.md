@@ -29,6 +29,7 @@ These are easily available in Anaconda Python.
       --pass PASS,     -p PASS   Postgres password
       --db DBNAME,     -d DBNAME Postgres database
       --output OUTPUT, -o OUTPUT Output file location
+      --title  TITLE,  -t TITLE  Title of the report 
 
 Individual reports may have additional arguments beyond these base arguments
 shared by all reports. By default, the output file is [name of the report].html
