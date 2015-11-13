@@ -1,4 +1,4 @@
-# pypostreports
+# pypostgreports
 A collection of generic "reports" that can be run on a Postgres 
 database including a data dictionary generator as well as a 
 database size report.
